@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马尔代夫旅行预算计算器 | Maldives Travel Budget Calculator</title>
+    <meta name="description" content="免费在线马尔代夫旅行预算计算器，帮助您规划完美的马尔代夫之旅。计算机票、酒店、餐饮、活动等费用。">
+    <meta name="keywords" content="马尔代夫,预算计算器,旅行规划,马尔代夫旅游,马尔代夫费用">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://yein.cn">
+</head>
+<body>
+    <header>
+        <h1>🏝️ 马尔代夫旅行预算计算器</h1>
+        <p class="subtitle">Maldives Travel Budget Calculator</p>
+    </header>
+    
+    <main>
+        <section class="calculator">
+            <h2>填写您的旅行信息</h2>
+            
+            <div class="form-group">
+                <label for="days">旅行天数</label>
+                <input type="number" id="days" value="5" min="1" max="30">
+            </div>
+            
+            <div class="form-group">
+                <label for="travelers">旅行人数</label>
+                <input type="number" id="travelers" value="2" min="1" max="10">
+            </div>
+            
+            <div class="form-group">
+                <label for="island-type">岛屿类型</label>
+                <select id="island-type">
+                    <option value="budget">经济型 ($150-300/晚)</option>
+                    <option value="mid" selected>舒适型 ($300-600/晚)</option>
+                    <option value="luxury">豪华型 ($600-1200/晚)</option>
+                    <option value="ultra">超豪华型 ($1200+/晚)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="meal-plan">餐食方案</label>
+                <select id="meal-plan">
+                    <option value="bb">含早餐 (BB)</option>
+                    <option value="hb" selected>半餐 (HB)</option>
+                    <option value="fb">全餐 (FB)</option>
+                    <option value="ai">一价全包 (AI)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="departure">出发城市</label>
+                <select id="departure">
+                    <option value="beijing">北京</option>
+                    <option value="shanghai" selected>上海</option>
+                    <option value="guangzhou">广州</option>
+                    <option value="hongkong">香港</option>
+                    <option value="singapore">新加坡</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="activities">活动预算</label>
+                <select id="activities">
+                    <option value="low">基础活动 ($100/人)</option>
+                    <option value="medium" selected>中等活动 ($300/人)</option>
+                    <option value="high">丰富活动 ($500/人)</option>
+                </select>
+            </div>
+            
+            <button onclick="calculateBudget()">计算预算</button>
+        </section>
+        
+        <section class="result" id="result" style="display: none;">
+            <h2>您的马尔代夫旅行预算</h2>
+            <div class="budget-breakdown">
+                <div class="budget-item">
+                    <span class="label">✈️ 国际机票</span>
+                    <span class="value" id="flight-cost">$0</span>
+                </div>
+                <div class="budget-item">
+                    <span class="label">🏨 酒店住宿</span>
+                    <span class="value" id="hotel-cost">$0</span>
+                </div>
+                <div class="budget-item">
+                    <span class="label">🚤 交通接驳</span>
+                    <span class="value" id="transfer-cost">$0</span>
+                </div>
+                <div class="budget-item">
+                    <span class="label">🍽️ 餐饮费用</span>
+                    <span class="value" id="meal-cost">$0</span>
+                </div>
+                <div class="budget-item">
+                    <span class="label">🤿 活动体验</span>
+                    <span class="value" id="activity-cost">$0</span>
+                </div>
+                <div class="budget-item">
+                    <span class="label">📋 其他费用</span>
+                    <span class="value" id="other-cost">$0</span>
+                </div>
+                <div class="budget-total">
+                    <span class="label">💰 预计总预算</span>
+                    <span class="value" id="total-cost">$0</span>
+                </div>
+            </div>
+            
+            <div class="tips">
+                <h3>💡 省钱小贴士</h3>
+                <ul id="tips-list"></ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>由 <a href="https://yein.cn" target="_blank" rel="noopener">YEIN 马尔代夫</a> 提供技术支持</p>
+        <p>更多马尔代夫旅行攻略请访问 <a href="https://yein.cn" target="_blank" rel="noopener">yein.cn</a></p>
+    </footer>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>

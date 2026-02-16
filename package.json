@@ -1,0 +1,26 @@
+{
+  "name": "maldives-budget-calculator",
+  "version": "1.0.0",
+  "description": "马尔代夫旅行预算计算器 - Maldives Travel Budget Calculator",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "python -m http.server 8080"
+  },
+  "keywords": [
+    "maldives",
+    "travel",
+    "budget",
+    "calculator",
+    "马尔代夫",
+    "旅行",
+    "预算"
+  ],
+  "author": "YEIN <contact@yein.cn>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yein-maldives/maldives-budget-calculator.git"
+  },
+  "homepage": "https://yein.cn"
+}
